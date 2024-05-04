@@ -1,13 +1,20 @@
 #include <node_api.h>
-#include <mutex>
-#include <sstream>
-#include <iomanip>
+#include <map>
 #include <iostream>
 #include <string>
 
+std::map<uint64_t, uint64_t> offsetList;
+
 #if defined(_WIN_PLATFORM_)
+auto InitOffsetsStatus = InitOffsets();
+void *InitOffsets()
+{
+	offsetList[23361] = 0x0;
+}
+
 #elif defined(_LINUX_PLATFORM_)
 #endif
+
 namespace demo
 {
 	napi_value init(napi_env env, napi_value exports)
