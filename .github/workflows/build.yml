@@ -1,4 +1,4 @@
-name: Build SignCall
+name: Build MoeHoo
 
 on:
   workflow_dispatch:
@@ -39,5 +39,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-          name: HookSign.${{ matrix.os }}.x64
-          path: build/Release/HookSign.node
+          name: MoeHoo.${{ matrix.os }}.x64
+          path: build/Release/MoeHoo.node
