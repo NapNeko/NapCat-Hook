@@ -4,7 +4,6 @@ cmake_policy(SET CMP0042 NEW)
 
 project (MoeHoo)
 # 指定utf8
-
 #
 #if(MSVC)
 #	add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
