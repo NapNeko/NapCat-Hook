@@ -12,13 +12,11 @@ namespace demo
 {
 	napi_value init(napi_env env, napi_value exports)
 	{
-		napi_status status;
 		napi_value fn;
-
 		napi_create_function(env, nullptr, 0, nullptr, nullptr, &fn);
-		napi_set_named_property(env, exports, "CallSign", fn);
+		napi_set_named_property(env, exports, "RegHookRkey", fn);
 		napi_create_function(env, nullptr, 0, nullptr, nullptr, &fn);
-		napi_set_named_property(env, exports, "InitSign", fn);
+		napi_set_named_property(env, exports, "SendPacket", fn);
 		return exports;
 	}
 	NAPI_MODULE(NODE_GYP_MODULE_NAME, init)
